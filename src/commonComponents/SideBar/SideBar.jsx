@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // import { useT heme } from "@emotion/react";
 import SideBarArray from "./SidebarArray";
 import Header from "../Header/Header";
-const SideBar = () => {
+const SideBar = ({ childComponent }) => {
   // const theme = useTheme();
 
   // const [state, setState] = useState({
@@ -151,8 +151,8 @@ const SideBar = () => {
           </Grid>
 
           <Grid item xs={7} md={9}>
-            usman
-            {/* {childComponent} */}
+            {/* usman */}
+            {childComponent}
           </Grid>
         </Grid>
       </Box>
