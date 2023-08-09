@@ -87,7 +87,19 @@ const SideBar = ({ childComponent }) => {
                 Uber Health
               </Typography>
 
+              <Box>
+                <button style={{
+                  background: "#000000",
+                  color: "#FFFFFF",
+                  // padding: "1rem"
+                  "&:hover": {
+                    background: "#000000",
 
+                  }
+                }}>
+                  + New ride
+                </button>
+              </Box>
               <Box>
                 {SideBarArray.map((item) => {
                   return (
@@ -115,6 +127,8 @@ const SideBar = ({ childComponent }) => {
                           >
                             {item.text2}
                           </Typography>
+
+
 
                         </Box>
                       </Link>
