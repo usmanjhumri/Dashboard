@@ -68,21 +68,21 @@ const SideBar = () => {
         <Grid container>
           <Grid item xs={5} md={2}>
             <Box
-              className="sidebar"
               sx={{
                 minWidth: "auto",
+                padding: "1rem",
 
                 borderTop: "none",
                 // background: theme.primary.sideBarBg,
                 borderRight: "1px solid rgba(200, 200, 200, 0.39)",
-                borderLeft: "1px solid rgba(200, 200, 200, 0.39)",
-                borderBottom: "1px solid rgba(200, 200, 200, 0.39)",
+                // borderLeft: "1px solid rgba(200, 200, 200, 0.39)",
+                // borderBottom: "1px solid rgba(200, 200, 200, 0.39)",
               }}
             >
               <Typography sx={{ fontWeight: 600, fontSize: "14px" }}>
                 All Stores
               </Typography>
-              <Typography sx={{ fontWeight: 600, fontSize: "14px" }}>
+              <Typography sx={{ fontWeight: 600, fontSize: "20px" }}>
                 Uber Health
               </Typography>
 
@@ -91,30 +91,29 @@ const SideBar = () => {
                   return (
                     <>
                       <Link style={{ textDecoration: "none" }} to={item.to}>
-                        <Box sx={{ display: "flex" }}>
-                          <img src={item.Img} style={{ width: "65%" }} alt="" />
+                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
 
-                          <Box sx={{ margin: "auto", marginLeft: "-2rem" }}>
-                            <Typography
-                              sx={{
-                                fontSize: "14px",
-                                fontWeight: 700,
-                                // color: theme.typography.textColor1,
-                              }}
-                            >
-                              {item.text1}
-                            </Typography>
 
-                            <Typography
-                              sx={{
-                                fontSize: "12px",
-                                fontWeight: 400,
-                                // color: theme.typography.textColor2,
-                              }}
-                            >
-                              {item.text2}
-                            </Typography>
-                          </Box>
+                          <Typography
+                            sx={{
+                              fontSize: "14px",
+                              fontWeight: 700,
+                              // color: theme.typography.textColor1,
+                            }}
+                          >
+                            {item.text1}
+                          </Typography>
+
+                          <Typography
+                            sx={{
+                              fontSize: "12px",
+                              fontWeight: 400,
+                              // color: theme.typography.textColor2,
+                            }}
+                          >
+                            {item.text2}
+                          </Typography>
+
                         </Box>
                       </Link>
                       <Divider
