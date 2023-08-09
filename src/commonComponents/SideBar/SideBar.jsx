@@ -5,6 +5,7 @@ import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 // import { useT heme } from "@emotion/react";
 import SideBarArray from "./SidebarArray";
+import Header from "../Header/Header";
 const SideBar = () => {
   // const theme = useTheme();
 
@@ -64,7 +65,7 @@ const SideBar = () => {
   return (
     <>
       <Box>
-        {/* <NavBar /> */}
+        <Header />
         <Grid container>
           <Grid item xs={5} md={2}>
             <Box
@@ -85,6 +86,7 @@ const SideBar = () => {
               <Typography sx={{ fontWeight: 600, fontSize: "20px" }}>
                 Uber Health
               </Typography>
+
 
               <Box>
                 {SideBarArray.map((item) => {
