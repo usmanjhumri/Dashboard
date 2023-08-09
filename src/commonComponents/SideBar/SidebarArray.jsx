@@ -4,7 +4,30 @@ export const SideBarArray = [
     {
         text1: "Today's rides",
         text2: "1",
-        to: '/'
+        to: '/',
+        childerns: [
+            {
+                text1: "Awaiting pickup",
+                text2: '-',
+                to: 'awaitingpickup'
+            },
+            {
+                text1: "In Progress",
+                text2: '-',
+                to: 'inprogress'
+            },
+            {
+                text1: "Completed",
+                text2: '1',
+                to: 'completed'
+            },
+            {
+                text1: "Upcoming",
+                text2: '-',
+                to: 'upcoming'
+            },
+
+        ]
     },
     {
         text1: "Future rides",
