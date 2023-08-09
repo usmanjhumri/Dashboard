@@ -1,3 +1,5 @@
+import { HiMail } from 'react-icons/hi'
+import { BiHelpCircle } from 'react-icons/bi'
 export const SideBarArray = [
     {
         text1: "Today's rides",
@@ -30,29 +32,19 @@ export const SideBarArray = [
 
 export const SideBarArray2 = [
     {
-        text1: " BevMo!",
-        text2: "Spirits   win   bear",
-        to: '/four'
-
+        text: "Need Help?",
     },
     {
-        text1: " BevMo!",
-        text2: "Spirits   win   bear",
-        to: '/five'
-
+        icon: <HiMail />,
+        title: "Email support",
     },
     {
-
-        text1: " BevMo!",
-        text2: "Spirits   win   bear",
-        to: '/six'
-
+        icon: <BiHelpCircle />,
+        title: "Help Center",
     },
     {
-
-        text1: " BevMo!",
-        text2: "Spirits   win   bear",
-        to: '/seven'
-
+        text: "Terms & Conditions",
+    }, {
+        text: "Legal",
     },
 ]

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Box, Button, Container, Divider, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { SideBarArray } from "./SidebarArray";
+import { SideBarArray, SideBarArray2 } from "./SidebarArray";
 import Header from "../Header/Header";
 const SideBar = ({ childComponent }) => {
 
@@ -40,7 +40,7 @@ const SideBar = ({ childComponent }) => {
                   + New ride
                 </Button>
               </Box>
-              <Box mt={5}>
+              <Box mt={5} mb={4}>
                 {SideBarArray.map((item) => {
                   return (
                     <>
@@ -75,35 +75,59 @@ const SideBar = ({ childComponent }) => {
                           </Box>
                         </Link>
                       </Typography>
-                      <Divider
-                        sx={{
-                          background: "rgba(200, 200, 200, 0.39)",
-                        }}
-                      />
+
                     </>
                   );
                 })}
               </Box>
 
-              <Box mt={3} sx={{ textAlign: "center" }}>
-                <Button
-                  sx={{
-                    width: "173px",
-                    height: "39px",
-                    borderRadius: "8px",
-                    background: "#01C5BA",
-                    textTransform: "capitalize",
-                    color: "#FFFFFF",
-                    marginBottom: "2rem",
+              <Divider mt={4}
+                sx={{
+                  background: "rgba(200, 200, 200, 0.39)",
+                }}
+              />
 
-                    "&:hover": {
-                      background: "#01C5BA",
-                    },
-                  }}
-                >
-                  Show All
-                </Button>
+              <Box mt={4}>
+                {
+                  SideBarArray2.map((item) => {
+                    return (
+                      <>
+                        <Typography mt={2}
+                          sx={{
+                            fontSize: "14px",
+                            fontWeight: 700,
+                            color: "#000000",
+
+                          }}
+                        >
+                          {item.text}
+                        </Typography>
+
+                        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                          <Box>
+                            {item.icon}
+                          </Box>
+
+                          <Typography
+                            sx={{
+                              fontSize: "16px",
+                              fontWeight: 600,
+                              color: "#000000",
+                            }}
+                          >
+                            <a href="#">
+                              {item.title}
+                            </a>
+                          </Typography>
+
+                        </Box>
+                      </>
+                    )
+                  })
+
+                }
               </Box>
+
             </Box>
           </Grid>
 
