@@ -1,4 +1,4 @@
-// import React, { useContext } from "react";
+
 import {
     AppBar,
     Toolbar,
@@ -11,51 +11,31 @@ import {
     ListItemButton,
     IconButton,
     TextField,
-    // MenuItem,
-    // Select,
-    Typography,
-    // Switch,
-    Badge,
 
+    Typography,
+
+    Badge,
 } from "@mui/material";
 
-
 import { useState } from "react";
-// import { AiOutlineAppstore } from 'react-icons/ai'
 import SearchIcon from "@mui/icons-material/Search";
-
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
-
-import { FaShoppingCart } from 'react-icons/fa'
-
+import { FaShoppingCart } from "react-icons/fa";
 const pages = ["Home", "Menu", "About", "Contact"];
-
-
 
 function Header() {
 
 
-    // const { getTheme } = useContext(ThemeChkr)
-    // const themeone = useTheme()
-    // console.log(themeone.bgColor);
-
-    // const handleChnage = (e) => {
-    //     getTheme(e.target.checked)
-
-    //     console.log(isCurentDark);
-    // }
-
     const badgeStyle = {
         "& .MuiBadge-badge": {
-            color: 'white',
-            backgroundColor: '#E91E63',
-        }
-    }
+            color: "white",
+            backgroundColor: "#E91E63",
+        },
+    };
 
     const [state, setState] = useState(false);
-    // const theme = useTheme();
-    // const [catgry, setCatgry] = useState("");
+
     const toggleDrawer = (open) => (event) => {
         if (
             event.type === "keydown" &&
@@ -85,7 +65,6 @@ function Header() {
                 {pages.map((text) => (
                     <ListItem key={text.name} disablePadding>
                         <ListItemButton
-
                             sx={{
                                 textAlign: "center",
                                 "&:hover": {
@@ -122,11 +101,7 @@ function Header() {
                                 width: "100%",
                             }}
                         >
-                            <Typography sx={{ forntWeight: "900" }}>
-                                Logo Here
-                            </Typography>
-
-
+                            <Typography sx={{ forntWeight: "900" }}>Logo Here</Typography>
 
                             {/* <Box sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
                                 <Select
@@ -190,30 +165,22 @@ function Header() {
                                 </IconButton>
                             </Box> */}
 
-
                             <Box sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
                                 <IconButton aria-label="cart">
                                     <Badge badgeContent={2} sx={badgeStyle}>
-
                                         <FaShoppingCart style={{ color: "#fff" }} />
-
                                     </Badge>
-
-
                                 </IconButton>
                             </Box>
 
-
                             <Box sx={{ display: { xs: "none", sm: "block", md: "block" } }}>
-                                <Typography fontSize="8px">
-                                    Total
-                                </Typography>
+                                <Typography fontSize="8px">Total</Typography>
                                 <Typography
                                     variant="body2"
                                     fontSize="10px"
                                     sx={{
                                         //  color: theme.textColor.navBody1,
-                                        fontWeight: "700"
+                                        fontWeight: "700",
                                     }}
                                 >
                                     $2000
@@ -234,11 +201,7 @@ function Header() {
                                 }}
                             >
                                 <Box sx={{ display: "flex", alignItems: "center" }}>
-                                    <Typography
-
-                                        sx={{ forntWeight: "900" }}
-                                        mr={2}
-                                    >
+                                    <Typography sx={{ forntWeight: "900" }} mr={2}>
                                         Logo Here
                                     </Typography>
                                     {/* <Toogle /> */}
