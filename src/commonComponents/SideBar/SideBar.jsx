@@ -1,66 +1,9 @@
 /* eslint-disable react/prop-types */
-import { Box, Button, Divider, Grid, Typography } from "@mui/material";
-
-// import NavBar from "../Navbar/Navbar";
+import { Box, Button, Container, Divider, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-// import { useT heme } from "@emotion/react";
-import SideBarArray from "./SidebarArray";
+import { SideBarArray } from "./SidebarArray";
 import Header from "../Header/Header";
 const SideBar = ({ childComponent }) => {
-  // const theme = useTheme();
-
-  // const [state, setState] = useState({
-  //   top: false,
-  //   left: false,
-  //   bottom: false,
-  //   right: false,
-  // });
-  // const toggleDrawer = (anchor, open) => (event) => {
-  //   if (
-  //     event.type === "keydown" &&
-  //     (event.key === "Tab" || event.key === "Shift")
-  //   ) {
-  //     return;
-  //   }
-
-  //   setState({ ...state, [anchor]: open });
-  // };
-
-  // const list = (anchor) => (
-  //   <Box
-  //     sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
-  //     role="presentation"
-  //     onClick={toggleDrawer(anchor, false)}
-  //     onKeyDown={toggleDrawer(anchor, false)}
-  //   >
-  //     <List>
-  //       {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-  //         // eslint-disable-next-line react/jsx-no-undef
-  //         <ListItem key={text} disablePadding>
-  //           <ListItemButton>
-  //             <ListItemIcon>
-  //               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-  //             </ListItemIcon>
-  //             <ListItemText primary={text} />
-  //           </ListItemButton>
-  //         </ListItem>
-  //       ))}
-  //     </List>
-  //     <Divider />
-  //     <List>
-  //       {["All mail", "Trash", "Spam"].map((text, index) => (
-  //         <ListItem key={text} disablePadding>
-  //           <ListItemButton>
-  //             <ListItemIcon>
-  //               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-  //             </ListItemIcon>
-  //             <ListItemText primary={text} />
-  //           </ListItemButton>
-  //         </ListItem>
-  //       ))}
-  //     </List>
-  //   </Box>
-  // );
 
   return (
     <>
@@ -72,12 +15,9 @@ const SideBar = ({ childComponent }) => {
               sx={{
                 minWidth: "auto",
                 padding: "1rem",
-
                 borderTop: "none",
-                // background: theme.primary.sideBarBg,
                 borderRight: "1px solid rgba(200, 200, 200, 0.39)",
-                // borderLeft: "1px solid rgba(200, 200, 200, 0.39)",
-                // borderBottom: "1px solid rgba(200, 200, 200, 0.39)",
+
               }}
             >
               <Typography sx={{ fontWeight: 600, fontSize: "14px" }}>
@@ -87,51 +27,54 @@ const SideBar = ({ childComponent }) => {
                 Uber Health
               </Typography>
 
-              <Box>
-                <button style={{
+              <Box mt={2}>
+                <Button sx={{
                   background: "#000000",
                   color: "#FFFFFF",
-                  // padding: "1rem"
+                  padding: { md: "5px 3.3rem", sm: "auto", xs: "auto" },
                   "&:hover": {
                     background: "#000000",
 
                   }
                 }}>
                   + New ride
-                </button>
+                </Button>
               </Box>
-              <Box>
+              <Box mt={5}>
                 {SideBarArray.map((item) => {
                   return (
                     <>
-                      <Link style={{ textDecoration: "none" }} to={item.to}>
-                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                      <Typography>
+                        <Link style={{ textDecoration: "none" }} to={item.to}>
+                          <Box mt={3} sx={{ display: "flex", justifyContent: "space-between" }}>
 
 
-                          <Typography
-                            sx={{
-                              fontSize: "14px",
-                              fontWeight: 700,
-                              // color: theme.typography.textColor1,
-                            }}
-                          >
-                            {item.text1}
-                          </Typography>
+                            <Typography
+                              sx={{
+                                fontSize: "14px",
+                                fontWeight: 700,
+                                color: "#000000",
 
-                          <Typography
-                            sx={{
-                              fontSize: "12px",
-                              fontWeight: 400,
-                              // color: theme.typography.textColor2,
-                            }}
-                          >
-                            {item.text2}
-                          </Typography>
+                              }}
+                            >
+                              {item.text1}
+                            </Typography>
+
+                            <Typography
+                              sx={{
+                                fontSize: "16px",
+                                fontWeight: 600,
+                                color: "#000000",
+                              }}
+                            >
+                              {item.text2}
+                            </Typography>
 
 
 
-                        </Box>
-                      </Link>
+                          </Box>
+                        </Link>
+                      </Typography>
                       <Divider
                         sx={{
                           background: "rgba(200, 200, 200, 0.39)",
@@ -164,9 +107,11 @@ const SideBar = ({ childComponent }) => {
             </Box>
           </Grid>
 
-          <Grid item xs={7} md={9}>
-            {/* usman */}
-            {childComponent}
+          <Grid item xs={7} md={10} sx={{ background: "#f7f5f7" }}>
+
+            <Container>
+              {childComponent}
+            </Container>
           </Grid>
         </Grid>
       </Box>
