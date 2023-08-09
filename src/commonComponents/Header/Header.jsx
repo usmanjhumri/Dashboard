@@ -23,18 +23,12 @@ import {
 import { useState } from "react";
 // import { AiOutlineAppstore } from 'react-icons/ai'
 import SearchIcon from "@mui/icons-material/Search";
-// import LogoutIcon from "@mui/icons-material/Logout";
-// import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
-// import { ThemeContext, useTheme } from "@emotion/react";
-// import { MdSearch } from 'react-icons/md'
-// import { CgSun } from 'react-icons/cg'
+
 import { FaShoppingCart } from 'react-icons/fa'
-// import MailIcon from '@mui/icons-material/Mail';
-// import DarkTheme from "../../Theming/DarkTheme";
-// import LightTheme from "../../Theming/LightTheme";
-// import { ThemeChkr } from "../../App";
+
 const pages = ["Home", "Menu", "About", "Contact"];
 
 
