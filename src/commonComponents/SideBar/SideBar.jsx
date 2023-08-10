@@ -15,10 +15,12 @@ const SideBar = ({ childComponent }) => {
   const [open, setOpen] = useState([]);
 
   const ToggleOpen = (index) => {
+
     if (open.includes(index)) {
+      setOpen(!open)
       setOpen(open.filter(item => item !== index))
     } else {
-      setOpen([...open, index])
+      setOpen([index])
     }
   }
 
@@ -98,6 +100,7 @@ const SideBar = ({ childComponent }) => {
                             <Box mt={2} pl={2}>
                               {item.childerns.map((child, childIndex) => (
                                 <Link
+                                  onClick={() => setOpen(!open)}
                                   key={childIndex}
                                   to={child.to}
                                   style={{
