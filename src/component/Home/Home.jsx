@@ -26,7 +26,7 @@ const Home = () => {
                         </Grid>
                         <Grid item xs={12} md={12}>
                             <Typography
-                                mt={3}
+                                mt={4}
                                 sx={{
                                     color: "#000000",
                                     fontSize: "24px",
@@ -48,9 +48,45 @@ const Home = () => {
                                     sx={{
                                         margin: "auto",
                                         textAlign: "center",
+                                        color: "#212121",
+                                        fontSize: "20px",
+                                        fontWeight: 500
                                     }}
                                 >
                                     There is no ride awaiting pickup
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={12}>
+                            <Typography
+                                mt={4}
+                                sx={{
+                                    color: "#000000",
+                                    fontSize: "24px",
+                                    fontWeight: 600,
+                                }}
+                            >
+                                In Progress
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12} md={12}>
+                            <Box
+                                mt={3}
+                                sx={{
+                                    backgroundColor: "#909090",
+                                    padding: "2rem",
+                                }}
+                            >
+                                <Typography
+                                    sx={{
+                                        margin: "auto",
+                                        textAlign: "center",
+                                        color: "#212121",
+                                        fontSize: "20px",
+                                        fontWeight: 500
+                                    }}
+                                >
+                                    There is no ride in progress
                                 </Typography>
                             </Box>
                         </Grid>
