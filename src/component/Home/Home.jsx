@@ -13,87 +13,157 @@ const Home = () => {
             >
                 <Container>
                     <Grid container>
-                        <Grid item xs={12} md={12}>
-                            <Typography
-                                sx={{
-                                    color: "#6f6e6f",
-                                    fontSize: "32px",
-                                    fontWeight: 600,
-                                    // textAlign: "left"
-                                }}
-                            >
-                                Today's rides
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} md={12}>
-                            <Typography
-                                mt={4}
-                                sx={{
-                                    color: "#000000",
-                                    fontSize: "24px",
-                                    fontWeight: 600,
-                                }}
-                            >
-                                Awaiting Pickup
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} md={12}>
-                            <Box
-                                mt={3}
-                                sx={{
-                                    backgroundColor: "#909090",
-                                    padding: "2rem",
-                                }}
-                            >
+                        {/* <Grid item xs={12} md={12}> */}
+                        <Container>
+                            <Container>
                                 <Typography
                                     sx={{
-                                        margin: "auto",
-                                        textAlign: "center",
-                                        color: "#212121",
-                                        fontSize: "20px",
-                                        fontWeight: 500
+                                        color: "#6f6e6f",
+                                        fontSize: "32px",
+                                        fontWeight: 600,
+                                        // textAlign: "left"
                                     }}
                                 >
-                                    There is no ride awaiting pickup
+                                    Today's rides
                                 </Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={12}>
-                            <Typography
-                                mt={4}
-                                sx={{
-                                    color: "#000000",
-                                    fontSize: "24px",
-                                    fontWeight: 600,
-                                }}
-                            >
-                                In Progress
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} md={12}>
-                            <Box
-                                mt={3}
-                                sx={{
-                                    backgroundColor: "#909090",
-                                    padding: "2rem",
-                                }}
-                            >
+                            </Container>
+                        </Container>
+                        {/* </Grid> */}
+                        {/* <Grid item xs={12} md={12}> */}
+                        <Container>
+                            <Container>
                                 <Typography
+                                    mt={4}
                                     sx={{
-                                        margin: "auto",
-                                        textAlign: "center",
-                                        color: "#212121",
-                                        fontSize: "20px",
-                                        fontWeight: 500
+                                        color: "#000000",
+                                        fontSize: "24px",
+                                        fontWeight: 600,
                                     }}
                                 >
-                                    There is no ride in progress
+                                    Awaiting Pickup
                                 </Typography>
-                            </Box>
+                            </Container>
+                        </Container>
+                        {/* </Grid> */}
+                        {/* <Grid item xs={12} md={12}> */}
+                        <Container>
+                            <Container>
+                                <Box
+                                    mt={3}
+                                    sx={{
+                                        backgroundColor: "#909090",
+                                        padding: "2rem",
+                                    }}
+                                >
+                                    <Typography
+                                        sx={{
+                                            margin: "auto",
+                                            textAlign: "center",
+                                            color: "#212121",
+                                            fontSize: "20px",
+                                            fontWeight: 500
+                                        }}
+                                    >
+                                        There is no ride awaiting pickup
+                                    </Typography>
+                                </Box>
+                            </Container>
+                        </Container>
+                        {/* </Grid> */}
+                        {/* <Grid item xs={12} md={12}> */}
+                        <Container>
+                            <Container>
+                                <Typography
+                                    mt={4}
+                                    sx={{
+                                        color: "#000000",
+                                        fontSize: "24px",
+                                        fontWeight: 600,
+                                    }}
+                                >
+                                    In Progress
+                                </Typography>
+                            </Container>
+                        </Container>
+                        {/* </Grid> */}
+                        {/* <Grid item xs={12} md={12}> */}
+                        <Container>
+                            <Container>
+                                <Box
+                                    mt={3}
+                                    sx={{
+                                        backgroundColor: "#909090",
+                                        padding: "2rem",
+                                    }}
+                                >
+                                    <Typography
+                                        sx={{
+                                            margin: "auto",
+                                            textAlign: "center",
+                                            color: "#212121",
+                                            fontSize: "20px",
+                                            fontWeight: 500
+                                        }}
+                                    >
+                                        There is no ride in progress
+                                    </Typography>
+                                </Box>
+                            </Container>
+                        </Container>
+                        {/* </Grid> */}
+                        <Grid item xs={12} md={12} mt={4}>
+                            <Container>
+                                <Container>
+                                    <Typography mt={4}
+                                        sx={{
+                                            color: "#000000",
+                                            fontSize: "24px",
+                                            fontWeight: 600,
+                                        }}>
+                                        Completed
+                                    </Typography>
+                                </Container>
+                                <AccordiansData />
+                            </Container>
                         </Grid>
-                        <Grid item xs={12} md={12}>
-                            <AccordiansData />
-                        </Grid>
+                        <Container>
+                            <Container>
+                                <Typography
+                                    mt={4}
+                                    sx={{
+                                        color: "#000000",
+                                        fontSize: "24px",
+                                        fontWeight: 600,
+                                    }}
+                                >
+                                    Upcoming
+                                </Typography>
+                            </Container>
+                        </Container>
+                        <Container>
+                            <Container>
+                                <Box
+                                    mt={3}
+                                    mb={3}
+                                    sx={{
+                                        backgroundColor: "#909090",
+                                        padding: "2rem",
+                                    }}
+                                >
+                                    <Typography
+                                        sx={{
+                                            margin: "auto",
+                                            textAlign: "center",
+                                            color: "#212121",
+                                            fontSize: "20px",
+                                            fontWeight: 500
+                                        }}
+                                    >
+                                        There are no upcoming rides
+                                    </Typography>
+                                </Box>
+                            </Container>
+                        </Container>
                     </Grid>
                 </Container>
             </Box>
