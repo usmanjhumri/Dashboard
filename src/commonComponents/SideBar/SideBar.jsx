@@ -13,18 +13,20 @@ import { SideBarArray, SideBarArray2 } from "./SidebarArray";
 import Header from "../Header/Header";
 const SideBar = ({ childComponent }) => {
   const [open, setOpen] = useState([]);
-  const [hide, setHide] = useState(false)
+  // const [hide, setHide] = useState(false)
 
-  const ToggleHide = () => {
-    setHide(!hide)
-  }
+  // const ToggleHide = () => {
+  //   setHide(!hide)
+  // }
   const ToggleOpen = (index) => {
+
+    console.log('togle ho rha ha', index);
 
     if (open.includes(index)) {
 
       setOpen(open.filter(item => item !== index))
     } else {
-      setOpen([index])
+      setOpen([...open, index])
     }
   }
 
@@ -106,7 +108,7 @@ const SideBar = ({ childComponent }) => {
                                 <Link
                                   key={childIndex}
                                   to={child.to}
-                                  onClick={() => ToggleHide()}
+                                  // onClick={ToggleHide}
                                   style={{
                                     textDecoration: "none",
                                     display: "flex",
