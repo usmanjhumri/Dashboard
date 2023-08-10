@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -10,13 +11,16 @@ import {
 import { Link } from "react-router-dom";
 import { SideBarArray, SideBarArray2 } from "./SidebarArray";
 import Header from "../Header/Header";
-import { useState } from "react";
 const SideBar = ({ childComponent }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState([]);
 
-  const toggleOpen = () => {
-    setOpen(!open);
-  };
+  const ToggleOpen = (index) => {
+    if (open.includes(index)) {
+      setOpen(open.filter(item => item !== index))
+    } else {
+      setOpen([...open, index])
+    }
+  }
 
   return (
     <>
@@ -54,72 +58,77 @@ const SideBar = ({ childComponent }) => {
                 </Button>
               </Box>
               <Box mt={5} mb={4}>
-                {SideBarArray.map((item) => {
+
+                {SideBarArray.map((item, index) => {
                   return (
                     <>
-                      <Box onClick={toggleOpen}>
-                        <Link style={{ textDecoration: "none" }} to={item.to}>
-                          <Box
-                            mt={3}
-                            sx={{
-                              display: "flex",
-                              justifyContent: "space-between",
-                            }}
-                          >
-                            <Typography
+                      <Box key={index}>
+                        <Box onClick={() => ToggleOpen(index)}>
+                          <Link style={{ textDecoration: "none" }} to={item.to}>
+                            <Box
+                              mt={3}
                               sx={{
-                                fontSize: "14px",
-                                fontWeight: 700,
-                                color: "#000000",
+                                display: "flex",
+                                justifyContent: "space-between",
                               }}
                             >
-                              {item.text1}
-                            </Typography>
 
-                            <Typography
-                              sx={{
-                                fontSize: "16px",
-                                fontWeight: 600,
-                                color: "#000000",
-                              }}
-                            >
-                              {item.text2}
-                            </Typography>
-                          </Box>
-                        </Link>
-                        {item.childerns && open && (
-                          <Box mt={2} pl={2}>
-                            {item.childerns.map((child, childIndex) => (
-                              <Link
-                                key={childIndex}
-                                to={child.to}
-                                style={{
-                                  textDecoration: "none",
-                                  display: "flex",
-                                  alignItems: "center",
-                                  justifyContent: "space-between"
+                              <Typography
+                                sx={{
+                                  fontSize: "14px",
+                                  fontWeight: 700,
+                                  color: "#000000",
                                 }}
                               >
-                                <Typography
-                                  mt={2}
+                                {item.text1}
+                              </Typography>
+
+                              <Typography
+                                sx={{
+                                  fontSize: "16px",
+                                  fontWeight: 600,
+                                  color: "#000000",
+                                }}
+                              >
+                                {item.text2}
+                              </Typography>
+                            </Box>
+                          </Link>
+                          {item.childerns && open.includes(index) && (
+                            <Box mt={2} pl={2}>
+                              {item.childerns.map((child, childIndex) => (
+                                <Link
                                   key={childIndex}
-                                  sx={{
+                                  to={child.to}
+                                  style={{
+                                    textDecoration: "none",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "space-between"
+                                  }}
+                                >
+
+                                  <Typography
+                                    mt={2}
+                                    key={childIndex}
+                                    sx={{
+                                      fontSize: "14px",
+                                      fontWeight: 600,
+                                      color: "#000000",
+                                    }}
+                                  >
+                                    {child.text1}
+                                  </Typography >
+                                  <Typography mt={2} sx={{
                                     fontSize: "14px",
                                     fontWeight: 600,
                                     color: "#000000",
-                                  }}
-                                >
-                                  {child.text1}
-                                </Typography >
-                                <Typography mt={2} sx={{
-                                  fontSize: "14px",
-                                  fontWeight: 600,
-                                  color: "#000000",
-                                }}>{item.text2}</Typography>
-                              </Link>
-                            ))}
-                          </Box>
-                        )}
+                                  }}>{item.text2}</Typography>
+                                </Link>
+                              ))}
+                            </Box>
+                          )}
+                        </Box>
                       </Box>
                     </>
                   );
