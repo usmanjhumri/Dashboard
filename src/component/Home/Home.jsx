@@ -12,11 +12,9 @@ const Home = () => {
         </div>
     )
 }
-// next 
+
 // ik navigation link bnana hai profile setting ka. 
-
 // usmy apny 
-
 // firstname,lastname,email,
 // airtable Token
 // DocuSign ( heading)
