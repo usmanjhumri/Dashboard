@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Box, Container, Grid, Typography } from "@mui/material";
+import AccordiansData from "./Accordian";
 
 const Home = () => {
     return (
@@ -89,6 +90,9 @@ const Home = () => {
                                     There is no ride in progress
                                 </Typography>
                             </Box>
+                        </Grid>
+                        <Grid item xs={12} md={12}>
+                            <AccordiansData />
                         </Grid>
                     </Grid>
                 </Container>
