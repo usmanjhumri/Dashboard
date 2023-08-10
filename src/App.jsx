@@ -4,6 +4,7 @@ import './App.css'
 import SideBar from './commonComponents/SideBar/SideBar'
 import Home from './component/Home/Home'
 import TodayRide from './component/Today\'s Ride/TodayRide'
+import Drafts from './component/Drafts/Drafts'
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
       <div>
         <Routes>
           <Route path='/' element={<SideBar childComponent={<Home />} />} />
-          <Route path='/one' element={<SideBar childComponent={<TodayRide />} />} />
+          <Route path='/futurerides' element={<SideBar childComponent={<TodayRide />} />} />
+          <Route path='/drafts' element={<SideBar childComponent={<Drafts />} />} />
         </Routes>
       </div>
     </>

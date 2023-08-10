@@ -32,20 +32,20 @@ export const SideBarArray = [
     {
         text1: "Future rides",
         // text2: "Spirits   win   bear",
-        to: '/one'
+        to: '/futurerides'
 
     },
     {
 
         text1: "Drafts",
         // text2: "Spirits   win   bear",
-        to: '/two'
+        to: '/drafts'
 
     },
     {
         text1: "Past rides",
         // text2: "Spirits   win   bear",
-        to: '/three'
+        to: '/pastrides'
 
     },
 ]
