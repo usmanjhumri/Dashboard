@@ -9,22 +9,22 @@ export const SideBarArray = [
             {
                 text1: "Awaiting pickup",
                 text2: '-',
-                to: 'awaitingpickup'
+                // to: 'awaitingpickup'
             },
             {
                 text1: "In Progress",
                 text2: '-',
-                to: 'inprogress'
+                // to: 'inprogress'
             },
             {
                 text1: "Completed",
                 text2: '1',
-                to: 'completed'
+                // to: 'completed'
             },
             {
                 text1: "Upcoming",
                 text2: '-',
-                to: 'upcoming'
+                // to: 'upcoming'
             },
 
         ]

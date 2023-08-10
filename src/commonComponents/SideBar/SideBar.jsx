@@ -105,12 +105,11 @@ const SideBar = ({ childComponent }) => {
                           {item.childerns && open.includes(index) && (
                             <Box mt={2} pl={2}>
                               {item.childerns.map((child, childIndex) => (
-                                <Link
+                                <Box
                                   key={childIndex}
-                                  to={child.to}
+
                                   // onClick={ToggleHide}
-                                  style={{
-                                    textDecoration: "none",
+                                  sx={{
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "space-between"
@@ -122,7 +121,7 @@ const SideBar = ({ childComponent }) => {
                                     key={childIndex}
                                     sx={{
                                       fontSize: "14px",
-                                      fontWeight: 600,
+                                      fontWeight: 500,
                                       color: "#000000",
                                     }}
                                   >
@@ -130,10 +129,10 @@ const SideBar = ({ childComponent }) => {
                                   </Typography >
                                   <Typography mt={2} sx={{
                                     fontSize: "14px",
-                                    fontWeight: 600,
+                                    fontWeight: 500,
                                     color: "#000000",
                                   }}>{item.text2}</Typography>
-                                </Link>
+                                </Box>
                               ))}
                             </Box>
                           )}
@@ -194,8 +193,10 @@ const SideBar = ({ childComponent }) => {
             </Box>
           </Grid>
 
-          <Grid item xs={7} md={10} sx={{ background: "#f7f5f7" }}>
-            <Container>{childComponent}</Container>
+          <Grid item xs={7} md={10} sx={{ background: "#f7f5f7", }}>
+            <Container sx={{
+
+            }}>{childComponent}</Container>
           </Grid>
         </Grid>
       </Box>
