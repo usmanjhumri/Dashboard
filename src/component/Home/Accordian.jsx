@@ -1,51 +1,54 @@
-import React from "react";
-import {
-    Accordion,
-    AccordionHeader,
-    AccordionBody,
-} from "@material-tailwind/react";
 
-const CUSTOM_ANIMATION = {
-    mount: { scale: 1 },
-    unmount: { scale: 0.9 },
-};
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const AccordiansData = () => {
-    const [open, setOpen] = React.useState(0);
-
-    const handleOpen = (value) => setOpen(open === value ? 0 : value);
-
     return (
-        <>
-            <Accordion open={open === 1} animate={CUSTOM_ANIMATION}>
-                <AccordionHeader onClick={() => handleOpen(1)}>What is Material Tailwind?</AccordionHeader>
-                <AccordionBody>
-                    We&apos;re not always in the position that we want to be at. We&apos;re constantly
-                    growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-                    ourselves and actualize our dreams.
-                </AccordionBody>
+        <div>
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                >
+                    <Typography>Accordion 1</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </Typography>
+                </AccordionDetails>
             </Accordion>
-            <Accordion open={open === 2} animate={CUSTOM_ANIMATION}>
-                <AccordionHeader onClick={() => handleOpen(2)}>
-                    How to use Material Tailwind?
-                </AccordionHeader>
-                <AccordionBody>
-                    We&apos;re not always in the position that we want to be at. We&apos;re constantly
-                    growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-                    ourselves and actualize our dreams.
-                </AccordionBody>
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                >
+                    <Typography>Accordion 2</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    </Typography>
+                </AccordionDetails>
             </Accordion>
-            <Accordion open={open === 3} animate={CUSTOM_ANIMATION}>
-                <AccordionHeader onClick={() => handleOpen(3)}>
-                    What can I do with Material Tailwind?
-                </AccordionHeader>
-                <AccordionBody>
-                    We&apos;re not always in the position that we want to be at. We&apos;re constantly
-                    growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-                    ourselves and actualize our dreams.
-                </AccordionBody>
+            <Accordion disabled>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel3a-content"
+                    id="panel3a-header"
+                >
+                    <Typography>Disabled Accordion</Typography>
+                </AccordionSummary>
             </Accordion>
-        </>
+        </div>
     );
 }
+
 export default AccordiansData
