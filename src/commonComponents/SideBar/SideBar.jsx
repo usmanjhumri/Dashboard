@@ -13,11 +13,15 @@ import { SideBarArray, SideBarArray2 } from "./SidebarArray";
 import Header from "../Header/Header";
 const SideBar = ({ childComponent }) => {
   const [open, setOpen] = useState([]);
+  const [hide, setHide] = useState(false)
 
+  const ToggleHide = () => {
+    setHide(!hide)
+  }
   const ToggleOpen = (index) => {
 
     if (open.includes(index)) {
-      setOpen(!open)
+
       setOpen(open.filter(item => item !== index))
     } else {
       setOpen([index])
@@ -100,9 +104,9 @@ const SideBar = ({ childComponent }) => {
                             <Box mt={2} pl={2}>
                               {item.childerns.map((child, childIndex) => (
                                 <Link
-                                  onClick={() => setOpen(!open)}
                                   key={childIndex}
                                   to={child.to}
+                                  onClick={() => ToggleHide()}
                                   style={{
                                     textDecoration: "none",
                                     display: "flex",
