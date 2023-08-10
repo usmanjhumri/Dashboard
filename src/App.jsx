@@ -7,6 +7,8 @@ import Drafts from './component/Drafts/Drafts'
 import PastRides from './component/Past Rides/PastRides'
 import AwaitingPickup from './component/AwaitingPickup/AwaitingPickup'
 import Inprogress from './component/Inprogress/Inprogress'
+import Completed from './component/Completed/Completed'
+import Upcoming from './component/Upcoming/Upcoming'
 
 function App() {
 
@@ -20,7 +22,8 @@ function App() {
           <Route path='/pastrides' element={<SideBar childComponent={<PastRides />} />} />
           <Route path='/awaitingpickup' element={<SideBar childComponent={<AwaitingPickup />} />} />
           <Route path='/inprogress' element={<SideBar childComponent={<Inprogress />} />} />
-          <Route path='/inprogress' element={<SideBar childComponent={<Inprogress />} />} />
+          <Route path='/completed' element={<SideBar childComponent={<Completed />} />} />
+          <Route path='/upcoming' element={<SideBar childComponent={<Upcoming />} />} />
         </Routes>
       </div>
     </>
