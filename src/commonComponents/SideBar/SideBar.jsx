@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { SideBarArray, SideBarArray2 } from "./SidebarArray";
-import Header from "../Header/Header";
+// import Header from "../Header/Header";
 const SideBar = ({ childComponent }) => {
   const [open, setOpen] = useState([]);
   // const [hide, setHide] = useState(false)
@@ -33,7 +33,7 @@ const SideBar = ({ childComponent }) => {
   return (
     <>
       <Box>
-        <Header />
+        {/* <Header /> */}
         <Grid container>
           <Grid item xs={5} md={2}>
             <Box

@@ -14,7 +14,7 @@ import { ErrorText } from "../helper/ErrorTestDisplayer";
 // import { signUpHandle } from "../../RTK/slice/Slice";
 // import { toast } from "react-toastify";
 // import { useNavigate } from "react-router-dom";
-const SignUp = () => {
+const Home = () => {
     // const { signUp } = useSelector((store) => store.mainSlice);
     // const dispatch = useDispatch();
 
@@ -24,9 +24,9 @@ const SignUp = () => {
 
         formState: { errors },
     } = useForm();
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    // }
 
 
     return (
@@ -42,13 +42,13 @@ const SignUp = () => {
                 >
 
                     <Typography component="h1" variant="h5">
-                        Sign up
+                        DocuSign
                     </Typography>
                     <Box
                         id="signUp"
                         component="form"
                         noValidate
-                        onSubmit={handleSubmit}
+                        onSubmit={(e) => e.preventDefault()}
                         sx={{ mt: 3 }}
                     >
                         <Grid container spacing={2}>
@@ -146,25 +146,51 @@ const SignUp = () => {
                             </Grid>
 
                         </Grid>
-                        <Button
-                            type="submit"
-                            variant="button"
-                            fullWidth
-                            sx={{
-                                mt: 3,
-                                mb: 2,
-                                px: 10,
-                                py: 2,
-                                color: "#FFFFFF",
-                                clipPath:
-                                    "polygon(21% 0, 94% 0, 100% 20%, 79% 100%, 6% 100%, 0 80%)",
-                                background:
-                                    " radial-gradient(241.67% 3206.67% at -4.58% -26.67%, #AD00FF 8.51%, #0029FF 90%)",
-                                cursor: "pointer",
-                            }}
-                        >
-                            Sign Up
-                        </Button>
+                        <Box sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+
+                        }}>
+                            <Button
+                                type="submit"
+                                variant="button"
+                                fullWidth
+                                sx={{
+                                    mt: 3,
+                                    mb: 2,
+                                    // px: 5,
+                                    py: 2,
+                                    color: "#FFFFFF",
+                                    clipPath:
+                                        "polygon(21% 0, 94% 0, 100% 20%, 79% 100%, 6% 100%, 0 80%)",
+                                    background:
+                                        " radial-gradient(241.67% 3206.67% at -4.58% -26.67%, #AD00FF 8.51%, #0029FF 90%)",
+                                    cursor: "pointer",
+                                }}
+                            >
+                                Connect
+                            </Button>
+                            <Button
+                                type="submit"
+                                variant="button"
+                                fullWidth
+                                sx={{
+                                    mt: 3,
+                                    mb: 2,
+                                    // px: 5,
+                                    py: 2,
+                                    color: "#FFFFFF",
+                                    clipPath:
+                                        "polygon(21% 0, 94% 0, 100% 20%, 79% 100%, 6% 100%, 0 80%)",
+                                    background:
+                                        " radial-gradient(241.67% 3206.67% at -4.58% -26.67%, #AD00FF 8.51%, #0029FF 90%)",
+                                    cursor: "pointer",
+                                }}
+                            >
+                                Disconnect
+                            </Button>
+                        </Box>
 
                     </Box>
                 </Box>
@@ -173,4 +199,4 @@ const SignUp = () => {
     );
 };
 
-export default SignUp;
+export default Home;
