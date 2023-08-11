@@ -31,7 +31,7 @@ const Home = () => {
 
     return (
         <div>
-            <Container component="main" maxWidth="xs">
+            <Container component="main" maxWidth="sm" >
                 <Box
                     sx={{
                         marginTop: 8,
@@ -41,7 +41,7 @@ const Home = () => {
                     }}
                 >
 
-                    <Typography component="h1" variant="h5">
+                    <Typography component="h1" variant="h3">
                         DocuSign
                     </Typography>
                     <Box
@@ -150,6 +150,7 @@ const Home = () => {
                             display: "flex",
                             justifyContent: "space-between",
                             alignItems: "center",
+                            gap: 3
 
                         }}>
                             <Button
@@ -162,8 +163,9 @@ const Home = () => {
                                     // px: 5,
                                     py: 2,
                                     color: "#FFFFFF",
-                                    clipPath:
-                                        "polygon(21% 0, 94% 0, 100% 20%, 79% 100%, 6% 100%, 0 80%)",
+                                    fontWeight: "800",
+                                    // clipPath:
+                                    //     "polygon(21% 0, 94% 0, 100% 20%, 79% 100%, 6% 100%, 0 80%)",
                                     background:
                                         " radial-gradient(241.67% 3206.67% at -4.58% -26.67%, #AD00FF 8.51%, #0029FF 90%)",
                                     cursor: "pointer",
@@ -181,8 +183,9 @@ const Home = () => {
                                     // px: 5,
                                     py: 2,
                                     color: "#FFFFFF",
-                                    clipPath:
-                                        "polygon(21% 0, 94% 0, 100% 20%, 79% 100%, 6% 100%, 0 80%)",
+                                    fontWeight: 800,
+                                    // clipPath:
+                                    //     "polygon(21% 0, 94% 0, 100% 20%, 79% 100%, 6% 100%, 0 80%)",
                                     background:
                                         " radial-gradient(241.67% 3206.67% at -4.58% -26.67%, #AD00FF 8.51%, #0029FF 90%)",
                                     cursor: "pointer",
