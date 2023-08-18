@@ -52,7 +52,7 @@ const Home = () => {
                         sx={{ mt: 3 }}
                     >
                         <Grid container spacing={2}>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={6} mt={2} mb={2}>
                                 <TextField
                                     autoComplete="given-name"
                                     name="firstName"
@@ -75,7 +75,7 @@ const Home = () => {
                                     </>
                                 )}
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={6} mt={2} mb={2}>
                                 <TextField
                                     required
                                     fullWidth
@@ -97,7 +97,7 @@ const Home = () => {
                                     </>
                                 )}
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} mt={2} mb={2}>
                                 <TextField
                                     required
                                     fullWidth
@@ -124,7 +124,7 @@ const Home = () => {
 
 
 
-                            <Grid item xs={12}>
+                            <Grid item xs={12} mt={2} mb={2}>
                                 <TextField
                                     required
                                     fullWidth
@@ -146,7 +146,7 @@ const Home = () => {
                             </Grid>
 
                         </Grid>
-                        <Box sx={{
+                        <Box mt={2} mb={2} sx={{
                             display: "flex",
                             justifyContent: "space-between",
                             alignItems: "center",

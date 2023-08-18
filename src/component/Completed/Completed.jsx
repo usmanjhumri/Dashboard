@@ -1,8 +1,13 @@
 
 
 const Completed = () => {
+
     return (
-        <div>Completed</div>
+        <>
+            <div className="complete">
+                usman
+            </div>
+        </>
     )
 }
 
