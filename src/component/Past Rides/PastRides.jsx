@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import styles from './DragAndDropBoxes.module.css';
+import LeftBox from "./LeftBox";
+
 
 const PastRides = () => {
     const [rightBoxItems, setRightBoxItems] = useState(["usman", "latif", "khan", "sb"]);
@@ -36,7 +38,12 @@ const PastRides = () => {
                 >
                     {leftBoxItems.map((item, index) => (
                         <div key={index} className={styles.draggableItem}>
-                            {item}
+                            <div className={styles.container}>
+
+                                <div className="one">box 1</div>
+                                <div className="one"> box 1</div>
+
+                            </div>
                         </div>
                     ))}
                 </div>
