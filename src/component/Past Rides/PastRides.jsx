@@ -51,16 +51,7 @@ const PastRides = () => {
                             </div>
                         </div>
                     ))}
-                    {/* {leftBoxItems.slice(2).map((item, index) => (
-                        <div key={index} className={styles.draggableItem}>
-                            <div className={styles.rightdraggableItem}>
 
-                                <div className={styles.rightBox}>{item.text}</div>
-
-
-                            </div>
-                        </div>
-                    ))} */}
                 </div>
                 <div className={styles.box}>
                     {rightBoxItems.map((item, index) => (
