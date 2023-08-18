@@ -40,37 +40,27 @@ const PastRides = () => {
                     onDragOver={handleDragOver}
                     onDrop={handleDrop}
                 >
-                    {/* <div className={styles.box}> */}
-                    <div className={styles.container}>
-                        <div className={styles.box1}>usman</div>
-                        <div className={styles.box1}>usman</div>
-                    </div>
-
-                    <div className={styles.container}>
-                        <div className={styles.box1}>usman</div>
-                        {/* <div className={styles.box1}>usman</div> */}
-                    </div>
-                    {/* </div> */}
-                    {/* {leftBoxItems.map((item, index) => (
+                    {leftBoxItems.map((item, index) => (
                         <div key={index} className={styles.draggableItem}>
                             <div className={styles.rightdraggableItem}>
 
-                                <div style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "space-between",
-                                    gap: 15
+                                <div className={styles.rightBox}>{item.text}</div>
+                                {/* <div className={styles.rightBox}>{item.text}</div> */}
 
-                                }}>
-                                    <div className={styles.rightBox}>{item.text}</div>
-                                    <div className={styles.rightBox}>{item.text}</div>
-                                </div>
+
+                            </div>
+                        </div>
+                    ))}
+                    {/* {leftBoxItems.slice(2).map((item, index) => (
+                        <div key={index} className={styles.draggableItem}>
+                            <div className={styles.rightdraggableItem}>
+
+                                <div className={styles.rightBox}>{item.text}</div>
 
 
                             </div>
                         </div>
                     ))} */}
-
                 </div>
                 <div className={styles.box}>
                     {rightBoxItems.map((item, index) => (
