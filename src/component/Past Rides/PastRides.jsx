@@ -40,7 +40,18 @@ const PastRides = () => {
                     onDragOver={handleDragOver}
                     onDrop={handleDrop}
                 >
-                    {leftBoxItems.map((item, index) => (
+                    {/* <div className={styles.box}> */}
+                    <div className={styles.container}>
+                        <div className={styles.box1}>usman</div>
+                        <div className={styles.box1}>usman</div>
+                    </div>
+
+                    <div className={styles.container}>
+                        <div className={styles.box1}>usman</div>
+                        {/* <div className={styles.box1}>usman</div> */}
+                    </div>
+                    {/* </div> */}
+                    {/* {leftBoxItems.map((item, index) => (
                         <div key={index} className={styles.draggableItem}>
                             <div className={styles.rightdraggableItem}>
 
@@ -54,12 +65,11 @@ const PastRides = () => {
                                     <div className={styles.rightBox}>{item.text}</div>
                                     <div className={styles.rightBox}>{item.text}</div>
                                 </div>
-                                {/* <div className={styles.rightBox}>{item.text}</div> */}
 
 
                             </div>
                         </div>
-                    ))}
+                    ))} */}
 
                 </div>
                 <div className={styles.box}>
