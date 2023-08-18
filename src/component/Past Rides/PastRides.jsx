@@ -45,7 +45,6 @@ const PastRides = () => {
                             <div className={styles.rightdraggableItem}>
 
                                 <div className={styles.rightBox}>{item.text}</div>
-                                {/* <div className={styles.rightBox}>{item.text}</div> */}
 
 
                             </div>
