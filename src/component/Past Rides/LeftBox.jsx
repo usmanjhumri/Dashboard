@@ -1,7 +1,5 @@
 const LeftBox = [
-    {
-        text: "box1"
-    },
+
     {
         text: "box2"
     },

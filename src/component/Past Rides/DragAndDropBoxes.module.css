@@ -33,7 +33,7 @@
 .rightdraggableItem {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 2rem 0px;
 }
 .draggableItem {

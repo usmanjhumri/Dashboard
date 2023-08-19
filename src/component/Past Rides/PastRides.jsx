@@ -4,7 +4,12 @@ import LeftBox from "./LeftBox";
 
 
 const PastRides = () => {
-    const [rightBoxItems, setRightBoxItems] = useState(LeftBox);
+    const [rightBoxItems, setRightBoxItems] = useState([
+        { text: "box 2" },
+        { text: "box 3" },
+        { text: "box 4" },
+        { text: "box 5" }
+    ]);
     const [leftBoxItems, setLeftBoxItems] = useState(LeftBox);
 
     const handleDragStart = (event, item) => {
@@ -39,12 +44,24 @@ const PastRides = () => {
                     className={styles.box}
                     onDragOver={handleDragOver}
                     onDrop={handleDrop}
+
                 >
+                    <div className={styles.rightdraggableItem}>
+
+
+                        <div className={styles.rightBox}>box1</div>
+                        <div className={styles.rightBox}>box1</div>
+
+
+                    </div>
+
                     {leftBoxItems.map((item, index) => (
                         <div key={index} className={styles.draggableItem}>
                             <div className={styles.rightdraggableItem}>
 
+
                                 <div className={styles.rightBox}>{item.text}</div>
+                                {/* <div className={styles.rightBox}>box1</div> */}
 
 
                             </div>
